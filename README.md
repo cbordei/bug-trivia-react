@@ -28,4 +28,6 @@ Your app is ready to be deployed!
 
 ## Deploy
 
+`git push heroku main`
+
 Deployed to heroku https://bug-trivia.herokuapp.com
