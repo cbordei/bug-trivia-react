@@ -1,16 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
 
-
-// RANKS = [
-//   "Gabor",
-//   "Borfas",
-//   "Smenar",
-//   "Peste",
-//   "Baiat",
-//   "Frate",
-//   "Veteran"
-// ]
-
 const Question = ({ question, setAnswerStatus }) => {
 	const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
 
@@ -87,7 +76,7 @@ const Quiz = ({ questions }) => {
   useEffect(() => {
   	if (answerStatus) {
 			setCorrectAnswerCount(count => count + 1)
-      let score = Math.round(correctAnswerCount/10)
+      let score = Math.round((correctAnswerCount/10)*7)
       setAnswerRank(ranks[score])
 		}
   }, [answerStatus])
